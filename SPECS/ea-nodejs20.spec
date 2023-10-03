@@ -1,7 +1,7 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
 Summary: Node.js 20
-Version: 20.7.0
+Version: 20.8.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -69,6 +69,15 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Mon Oct 02 2023 Cory McIntire <cory@cpanel.net> - 20.8.0-1
+- EA-11715: Update ea-nodejs20 from v20.7.0 to v20.8.0
+    undici - Cookie headers are not cleared in cross-domain redirect in undici-fetch (High) - (CVE-2023-45143)
+    nghttp2 - HTTP/2 Rapid Reset (High) - (CVE-2023-44487)
+    Permission model improperly protects against path traversal (High) - (CVE-2023-39331)
+    Path traversal through path stored in Uint8Array (High) - (CVE-2023-39332)
+    Integrity checks according to policies can be circumvented (Medium) - (CVE-2023-38552)
+    Code injection via WebAssembly export names (Low) - (CVE-2023-39333)
+
 * Wed Sep 20 2023 Travis Holloway <t.holloway@cpanel.net> - 20.7.0-1
 - EA-11698: Update ea-nodejs20 from v20.6.1 to v20.7.0
 
