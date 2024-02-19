@@ -71,6 +71,14 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 %changelog
 * Wed Feb 14 2024 Cory McIntire <cory@cpanel.net> - 20.11.1-1
 - EA-11975: Update ea-nodejs20 from v20.11.0 to v20.11.1
+- CVE-2024-21892 - Code injection and privilege escalation through Linux capabilities- (High)
+- CVE-2024-22019 - http: Reading unprocessed HTTP request with unbounded chunk extension allows DoS attacks- (High)
+- CVE-2024-21896 - Path traversal by monkey-patching Buffer internals- (High)
+- CVE-2024-22017 - setuid() does not drop all privileges due to io_uring - (High)
+- CVE-2023-46809 - Node.js is vulnerable to the Marvin Attack (timing variant of the Bleichenbacher attack against PKCS#1 v1.5 padding) - (Medium)
+- CVE-2024-21891 - Multiple permission model bypasses due to improper path traversal sequence sanitization - (Medium)
+- CVE-2024-21890 - Improper handling of wildcards in --allow-fs-read and --allow-fs-write (Medium)
+- CVE-2024-22025 - Denial of Service by resource exhaustion in fetch() brotli decoding - (Medium)
 
 * Wed Jan 10 2024 Cory McIntire <cory@cpanel.net> - 20.11.0-1
 - EA-11904: Update ea-nodejs20 from v20.10.0 to v20.11.0
