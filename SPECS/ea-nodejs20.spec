@@ -71,6 +71,7 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 %changelog
 * Wed Apr 10 2024 Cory McIntire <cory@cpanel.net> - 20.12.2-1
 - EA-12083: Update ea-nodejs20 from v20.12.1 to v20.12.2
+- Command injection via args parameter of child_process.spawn without shell option enabled on Windows (CVE-2024-27980) - (HIGH)
 
 * Wed Apr 03 2024 Cory McIntire <cory@cpanel.net> - 20.12.1-1
 - EA-12068: Update ea-nodejs20 from v20.12.0 to v20.12.1
