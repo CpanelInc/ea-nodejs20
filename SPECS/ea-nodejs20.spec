@@ -1,7 +1,7 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
 Summary: Node.js 20
-Version: 20.12.2
+Version: 20.13.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -69,6 +69,9 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Tue May 07 2024 Cory McIntire <cory@cpanel.net> - 20.13.0-1
+- EA-12128: Update ea-nodejs20 from v20.12.2 to v20.13.0
+
 * Wed Apr 10 2024 Cory McIntire <cory@cpanel.net> - 20.12.2-1
 - EA-12083: Update ea-nodejs20 from v20.12.1 to v20.12.2
 - Command injection via args parameter of child_process.spawn without shell option enabled on Windows (CVE-2024-27980) - (HIGH)
