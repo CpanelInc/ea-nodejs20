@@ -1,7 +1,7 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
 Summary: Node.js 20
-Version: 20.17.0
+Version: 20.18.0
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -69,6 +69,9 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Thu Oct 03 2024 Cory McIntire <cory@cpanel.net> - 20.18.0-1
+- EA-12444: Update ea-nodejs20 from v20.17.0 to v20.18.0
+
 * Wed Aug 21 2024 Cory McIntire <cory@cpanel.net> - 20.17.0-1
 - EA-12348: Update ea-nodejs20 from v20.16.0 to v20.17.0
 
