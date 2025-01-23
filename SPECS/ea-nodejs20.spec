@@ -71,12 +71,12 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 %changelog
 * Tue Jan 21 2025 Cory McIntire <cory@cpanel.net> - 20.18.2-1
 - EA-12663: Update ea-nodejs20 from v20.18.1 to v20.18.2
-
-* Wed Nov 20 2024 Cory McIntire <cory@cpanel.net> - 20.18.1-1
-- EA-12565: Update ea-nodejs20 from v20.18.0 to v20.18.1
 	- Worker permission bypass via InternalWorker leak in diagnostics (CVE-2025-23083) - (high)
 	- GOAWAY HTTP/2 frames cause memory leak outside heap (CVE-2025-23085) - (medium)
 	- Path traversal by drive name in Windows environment (CVE-2025-23084) - (medium)
+
+* Wed Nov 20 2024 Cory McIntire <cory@cpanel.net> - 20.18.1-1
+- EA-12565: Update ea-nodejs20 from v20.18.0 to v20.18.1
 
 * Thu Oct 03 2024 Cory McIntire <cory@cpanel.net> - 20.18.0-1
 - EA-12444: Update ea-nodejs20 from v20.17.0 to v20.18.0
