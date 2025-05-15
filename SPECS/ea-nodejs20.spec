@@ -1,7 +1,7 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
 Summary: Node.js 20
-Version: 20.19.1
+Version: 20.19.2
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -69,6 +69,12 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Wed May 14 2025 Cory McIntire <cory.mcintire@webpros.com> - 20.19.2-1
+- EA-12866: Update ea-nodejs20 from v20.19.1 to v20.19.2
+	- Improper error handling in async cryptographic operations crashes process (CVE-2025-23166) - (high)
+	- Improper HTTP header block termination in llhttp (CVE-2025-23167) - (medium)
+	- Corrupted pointer in node::fs::ReadFileUtf8(const FunctionCallbackInfo<Value>& args) when args[0] is a string. (CVE-2025-23165) - (low)
+
 * Thu Apr 24 2025 Cory McIntire <cory.mcintire@webpros.com> - 20.19.1-1
 - EA-12831: Update ea-nodejs20 from v20.19.0 to v20.19.1
 
