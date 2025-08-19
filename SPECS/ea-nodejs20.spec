@@ -1,7 +1,7 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
 Summary: Node.js 20
-Version: 20.19.3
+Version: 20.19.4
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
 %define release_prefix 1
 Release: %{release_prefix}%{?dist}.cpanel
@@ -69,6 +69,10 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Tue Jul 15 2025 Cory McIntire <cory.mcintire@webpros.com> - 20.19.4-1
+- EA-13026: Update ea-nodejs20 from v20.19.3 to v20.19.4
+- (CVE-2025-27210) Windows Device Names (CON, PRN, AUX) Bypass Path Traversal Protection in path.normalize()
+
 * Thu Jun 26 2025 Cory McIntire <cory.mcintire@webpros.com> - 20.19.3-1
 - EA-12943: Update ea-nodejs20 from v20.19.2 to v20.19.3
 
