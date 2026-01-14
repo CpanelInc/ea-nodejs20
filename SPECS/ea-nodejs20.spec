@@ -71,6 +71,8 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 %changelog
 * Tue Jan 13 2026 Cory McIntire <cory.mcintire@webpros.com> - 20.20.0-1
 - EA-13314: Update ea-nodejs20 from v20.19.6 to v20.20.0
+- CVE-2025-55132 - HTTP Request Smuggling vulnerability in permission model
+- CVE-2025-59465 - TLSSocket default error handler vulnerability
 
 * Tue Nov 25 2025 Cory McIntire <cory.mcintire@webpros.com> - 20.19.6-1
 - EA-13278: Update ea-nodejs20 from v20.19.5 to v20.19.6
