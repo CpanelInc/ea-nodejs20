@@ -1,13 +1,13 @@
 Name:    ea-nodejs20
 Vendor:  cPanel, Inc.
-Summary: Node.js 20
+Summary: EOL Node.js 20
 Version: 20.20.2
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4572 for more details
-%define release_prefix 2
+%define release_prefix 3
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group:   Development/Languages
-URL:  https://nodejs.org
+URL: https://endoflife.date/nodejs
 Source0: https://nodejs.org/dist/v%{version}/node-v%{version}-linux-x64.tar.gz
 
 Provides: ea4-nodejs
@@ -16,6 +16,8 @@ Conflicts: ea4-nodejs
 Conflicts: ea-nodejs10
 
 %description
+nodejs 20 has reached End of Life.
+
 Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
 %prep
@@ -69,6 +71,9 @@ echo -n /opt/cpanel/ea-nodejs20/bin/node > %{buildroot}/etc/cpanel/ea4/passenger
 
 
 %changelog
+* Mon Oct 26 2026 Cory McIntire <cory.mcintire@webpros.com> - 20.20.2-3
+- EA-13623: Mark ea-nodejs20 as EOL
+
 * Wed Apr 01 2026 Cory McIntire <cory.mcintire@webpros.com> - 20.20.2-2
 - EA-13383: Add CVE documentation for Node.js 20.20.2
 - CVE-2026-21637: Improper network access restriction (High)
